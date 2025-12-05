@@ -265,10 +265,10 @@ func toOrderedJSON(_ devices: [[String: Any]]) -> String {
 
 func printHelp() {
     let helpText = """
-    DeviceScanner - 扫描 macOS 上的设备
+    mobile_device_probe - 扫描 macOS 上的设备
 
     用法:
-      DeviceScanner [选项]
+      mobile_device_probe [选项]
 
     选项:
       real          只显示真机 (iOS + Android + 鸿蒙)
