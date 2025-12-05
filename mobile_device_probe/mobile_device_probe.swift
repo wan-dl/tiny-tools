@@ -277,7 +277,7 @@ func printHelp() {
       ios           只显示 iOS 真机
       ios-sim       只显示 iOS 模拟器
       android       只显示 Android 真机
-      harmonyos     只显示鸿蒙手机
+      harmony       只显示鸿蒙手机
       --help, -h    显示本帮助信息
     """
     print(helpText)
