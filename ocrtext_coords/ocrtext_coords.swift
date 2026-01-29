@@ -135,8 +135,15 @@ if locations.isEmpty {
         for (index, loc) in locations.enumerated() {
             let centerX = loc.boundingBox.midX
             let centerY = loc.boundingBox.midY
+            // 转义 JSON 特殊字符
+            let escapedText = loc.text
+                .replacingOccurrences(of: "\\", with: "\\\\")
+                .replacingOccurrences(of: "\"", with: "\\\"")
+                .replacingOccurrences(of: "\n", with: "\\n")
+                .replacingOccurrences(of: "\r", with: "\\r")
+                .replacingOccurrences(of: "\t", with: "\\t")
             print("    {")
-            print("      \"text\": \"\(loc.text)\",")
+            print("      \"text\": \"\(escapedText)\",")
             print("      \"confidence\": \(loc.confidence),")
             print("      \"boundingBox\": {")
             print("        \"x\": \(Int(loc.boundingBox.origin.x)),")
